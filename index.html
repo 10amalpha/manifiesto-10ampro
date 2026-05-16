@@ -366,17 +366,7 @@
     font-weight: 600;
   }
 
-  /* SVG Seals */
-  .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-
-  .brand-emblem {
-    display: block;
-    width: 84px;
-    height: 84px;
-    margin: 0 auto 24px;
-    filter: drop-shadow(0 3px 8px rgba(70, 20, 20, 0.28));
-  }
-
+  /* Logo Seal */
   .seal-block {
     display: flex;
     flex-direction: column;
@@ -384,11 +374,13 @@
     margin-bottom: 24px;
   }
 
-  .seal-large {
+  .seal-img {
     display: block;
     width: 118px;
     height: 118px;
-    filter: drop-shadow(0 2px 4px rgba(92, 67, 22, 0.2));
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 3px 8px rgba(28, 18, 8, 0.18));
   }
 
   .seal-date {
@@ -456,8 +448,7 @@
     .closing-statement { font-size: 18px; margin-bottom: 40px; }
     .divider { letter-spacing: 0.6em; margin: 22px 0; }
     .divider.large { margin: 36px 0; }
-    .brand-emblem { width: 64px; height: 64px; margin-bottom: 18px; }
-    .seal-large { width: 96px; height: 96px; }
+    .seal-img { width: 96px; height: 96px; }
     .seal-date { font-size: 9px; letter-spacing: 0.4em; }
     .signature { font-size: 9px; letter-spacing: 0.4em; }
   }
@@ -469,25 +460,6 @@
 </style>
 </head>
 <body>
-
-<svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="gold-grad" cx="32%" cy="28%" r="82%">
-      <stop offset="0%" stop-color="#E8CB85"/>
-      <stop offset="50%" stop-color="#C9A961"/>
-      <stop offset="100%" stop-color="#8B6914"/>
-    </radialGradient>
-    <symbol id="seal-10ampro" viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="95" fill="url(#gold-grad)"/>
-      <circle cx="100" cy="100" r="94" fill="none" stroke="#5C4316" stroke-width="0.8" opacity="0.65"/>
-      <circle cx="100" cy="100" r="86" fill="none" stroke="#5C4316" stroke-width="0.4" stroke-dasharray="1.5 2" opacity="0.45"/>
-      <text x="100" y="124" font-family="Anton, 'Arial Narrow', Impact, sans-serif" font-size="92" fill="#5C1818" text-anchor="middle">10</text>
-      <text x="34" y="112" font-family="Anton, 'Arial Narrow', Impact, sans-serif" font-size="30" fill="#5C1818" text-anchor="middle">A</text>
-      <text x="166" y="112" font-family="Anton, 'Arial Narrow', Impact, sans-serif" font-size="30" fill="#5C1818" text-anchor="middle">M</text>
-      <text x="100" y="160" font-family="Anton, 'Arial Narrow', Impact, sans-serif" font-size="22" fill="#5C1818" text-anchor="middle" letter-spacing="4">PRO</text>
-    </symbol>
-  </defs>
-</svg>
 
 <main class="scroll">
 
@@ -733,7 +705,7 @@
     </p>
 
     <div class="seal-block">
-      <svg class="seal-large" viewBox="0 0 200 200" aria-label="10AMPRO" role="img"><use href="#seal-10ampro"/></svg>
+      <img class="seal-img" src="/logo.jpg" alt="10AMPRO" width="118" height="118">
       <div class="seal-date">MMXXVI</div>
     </div>
 

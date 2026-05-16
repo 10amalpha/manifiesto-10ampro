@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifiesto · 10AMPRO</title>
+<meta name="description" content="Manifiesto 10AMPRO — Open Source Capital · Network Sharing · Collective Intelligence">
+<meta property="og:title" content="Manifiesto 10AMPRO">
+<meta property="og:description" content="Open Source Capital · Network Sharing · Collective Intelligence">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFE4CB;
+    --paper-light: #F8F0DC;
+    --paper-edge: #D9C9A2;
+    --ink: #1C1208;
+    --ink-soft: #3A2A18;
+    --ink-mute: #5C4326;
+    --gold: #8B6914;
+    --gold-bright: #B8860B;
+    --gold-pale: #D4B86A;
+    --crimson: #6B1F1F;
+    --border: #C9A961;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { background: var(--paper); scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--ink);
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(184,134,11,0.08), transparent 55%),
+      radial-gradient(ellipse at 80% 90%, rgba(107,31,31,0.05), transparent 60%),
+      radial-gradient(ellipse at 50% 50%, rgba(217,201,162,0.3), transparent 70%),
+      var(--paper);
+    min-height: 100vh;
+    padding: 48px 20px 96px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      repeating-radial-gradient(circle at 30% 40%, transparent 0, rgba(139,105,20,0.018) 1px, transparent 2px),
+      repeating-radial-gradient(circle at 70% 60%, transparent 0, rgba(26,18,8,0.025) 1px, transparent 3px),
+      repeating-radial-gradient(circle at 10% 80%, transparent 0, rgba(107,31,31,0.012) 1px, transparent 2px);
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+  }
+
+  .scroll {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    background:
+      linear-gradient(180deg, var(--paper-edge) 0%, var(--paper-light) 6%, var(--paper-light) 94%, var(--paper-edge) 100%);
+    padding: 72px 72px 88px;
+    box-shadow:
+      0 0 0 1px rgba(139,105,20,0.18),
+      0 2px 0 0 var(--paper),
+      0 4px 0 1px rgba(139,105,20,0.12),
+      0 8px 0 2px rgba(139,105,20,0.06),
+      0 40px 80px -24px rgba(28,18,8,0.32);
+    z-index: 1;
+  }
+
+  .scroll::before, .scroll::after {
+    content: '';
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent);
+  }
+  .scroll::before { top: 22px; }
+  .scroll::after { bottom: 28px; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding-bottom: 38px;
+    margin-bottom: 52px;
+    border-bottom: 1px solid rgba(139,105,20,0.28);
+    position: relative;
+  }
+
+  .header::after {
+    content: '✦';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper-light);
+    color: var(--gold-bright);
+    padding: 0 14px;
+    font-size: 16px;
+  }
+
+  .crest-mark {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.6em;
+    color: var(--gold);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+  }
+
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    font-size: clamp(44px, 9vw, 80px);
+    letter-spacing: 0.09em;
+    color: var(--ink);
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+
+  .header .brand {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 22px;
+  }
+
+  .header .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .header .subtitle .sep {
+    color: var(--gold-bright);
+    margin: 0 0.6em;
+    font-style: normal;
+  }
+
+  .header .year {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.5em;
+    color: var(--ink-mute);
+    margin-top: 22px;
+    text-transform: uppercase;
+  }
+
+  /* Preamble */
+  .preamble {
+    font-size: 20px;
+    line-height: 1.72;
+    margin-bottom: 64px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .preamble p { margin-bottom: 1em; }
+  .preamble p:last-child { margin-bottom: 0; }
+
+  .preamble p.lead { font-size: 22px; font-style: italic; color: var(--ink-soft); text-align: center; margin-bottom: 1.4em; }
+
+  .preamble p.first::first-letter {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 82px;
+    line-height: 0.85;
+    float: left;
+    margin: 6px 16px -6px 0;
+    color: var(--crimson);
+    font-weight: 700;
+  }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 28px 0;
+    color: var(--gold-bright);
+    font-size: 18px;
+    letter-spacing: 1em;
+  }
+  .divider.large { margin: 48px 0; font-size: 22px; }
+
+  /* Articles */
+  .article {
+    margin-bottom: 60px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .article-mark {
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.45em;
+  }
+
+  .article-mark .roman {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--gold-bright);
+    letter-spacing: 0.2em;
+    font-weight: 600;
+  }
+
+  .article-mark .ornament {
+    display: inline-block;
+    margin: 0 16px;
+    color: var(--gold-bright);
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  .article h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(22px, 4.2vw, 30px);
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 36px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .article p {
+    margin-bottom: 1.05em;
+    font-size: 19px;
+    line-height: 1.78;
+  }
+
+  .article p.first::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 60px;
+    line-height: 0.88;
+    float: left;
+    margin: 9px 12px -4px 0;
+    color: var(--gold-bright);
+    font-weight: 700;
+  }
+
+  .article ul {
+    list-style: none;
+    margin: 0.6em 0 1.2em 18px;
+  }
+  .article ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 0.35em;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .article ul li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: var(--gold-bright);
+    font-size: 24px;
+    line-height: 1;
+    top: -2px;
+    font-weight: 700;
+  }
+
+  /* Special emphasis lines */
+  .verse {
+    font-style: italic;
+    text-align: center;
+    color: var(--crimson);
+    font-size: 21px;
+    margin: 1.4em 0;
+    line-height: 1.45;
+  }
+
+  .verse strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--crimson);
+  }
+
+  .standalone {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+    margin: 1.4em 0;
+    text-transform: uppercase;
+  }
+
+  /* Closing */
+  .closing {
+    margin-top: 80px;
+    padding-top: 44px;
+    border-top: 1px solid rgba(139,105,20,0.28);
+    text-align: center;
+    position: relative;
+  }
+
+  .closing::before {
+    content: '❦';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper-light);
+    color: var(--gold-bright);
+    padding: 0 14px;
+    font-size: 20px;
+  }
+
+  .closing-paragraph {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 36px;
+    hyphens: auto;
+  }
+
+  .closing-paragraph + .closing-paragraph { margin-top: -12px; }
+
+  .closing-pillars {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.2em;
+    color: var(--ink);
+    line-height: 2.2;
+    margin: 40px 0 32px;
+  }
+
+  .closing-pillars div { display: block; }
+  .closing-pillars div:nth-child(2) { color: var(--gold); }
+
+  .closing-statement {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+    line-height: 1.5;
+  }
+
+  .closing-statement strong {
+    font-style: normal;
+    color: var(--crimson);
+    font-weight: 600;
+  }
+
+  /* Seal */
+  .seal {
+    width: 124px;
+    height: 124px;
+    margin: 0 auto 24px;
+    border: 2px solid var(--gold-bright);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    background: radial-gradient(circle, rgba(184,134,11,0.08) 0%, rgba(184,134,11,0.02) 100%);
+    box-shadow:
+      inset 0 0 0 5px var(--paper-light),
+      inset 0 0 0 6px var(--gold-pale),
+      0 4px 12px -2px rgba(139,105,20,0.25);
+    position: relative;
+  }
+
+  .seal::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 1px dashed rgba(184,134,11,0.35);
+    border-radius: 50%;
+  }
+
+  .seal .seal-10 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 30px;
+    color: var(--gold-bright);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .seal .seal-am {
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    color: var(--ink);
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .seal .seal-mmxxvi {
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    color: var(--ink-mute);
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .signature {
+    margin-top: 14px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.55em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+
+  .signature a {
+    color: var(--ink-mute);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .signature a:hover { border-bottom-color: var(--gold-bright); }
+
+  /* Selection */
+  ::selection {
+    background: rgba(184,134,11,0.25);
+    color: var(--ink);
+  }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    body { padding: 16px 8px 48px; }
+    .scroll { padding: 44px 24px 60px; }
+    .scroll::before, .scroll::after { left: 12px; right: 12px; }
+    .scroll::before { top: 14px; }
+    .scroll::after { bottom: 18px; }
+    .header { padding-bottom: 28px; margin-bottom: 36px; }
+    .header h1 { letter-spacing: 0.06em; }
+    .header .brand { font-size: 16px; letter-spacing: 0.12em; }
+    .header .subtitle { font-size: 15px; }
+    .header .subtitle .sep { margin: 0 0.3em; }
+    .crest-mark { font-size: 9px; letter-spacing: 0.45em; }
+    .header .year { font-size: 9px; letter-spacing: 0.4em; }
+    .preamble { font-size: 17.5px; margin-bottom: 44px; line-height: 1.65; }
+    .preamble p.lead { font-size: 18px; }
+    .preamble p.first::first-letter { font-size: 62px; margin: 5px 12px -4px 0; }
+    .article { margin-bottom: 44px; }
+    .article p { font-size: 17.5px; line-height: 1.7; }
+    .article p.first::first-letter { font-size: 46px; }
+    .article-mark { font-size: 11px; letter-spacing: 0.32em; }
+    .article-mark .roman { font-size: 15px; }
+    .article-mark .ornament { margin: 0 10px; }
+    .article ul li { padding-left: 18px; font-size: 17px; }
+    .verse { font-size: 18px; }
+    .standalone { font-size: 13px; letter-spacing: 0.14em; }
+    .closing { margin-top: 56px; padding-top: 32px; }
+    .closing-paragraph { font-size: 17.5px; }
+    .closing-pillars { font-size: 13px; letter-spacing: 0.14em; line-height: 2; }
+    .closing-statement { font-size: 18px; margin-bottom: 40px; }
+    .divider { letter-spacing: 0.6em; margin: 22px 0; }
+    .divider.large { margin: 36px 0; }
+    .seal { width: 104px; height: 104px; }
+    .seal .seal-10 { font-size: 25px; }
+    .seal .seal-am { font-size: 11px; letter-spacing: 0.3em; }
+    .seal .seal-mmxxvi { font-size: 8px; }
+    .signature { font-size: 9px; letter-spacing: 0.4em; }
+  }
+
+  @media (max-width: 420px) {
+    body { padding: 10px 4px 40px; }
+    .scroll { padding: 36px 18px 48px; }
+  }
+</style>
+</head>
+<body>
+<main class="scroll">
+
+  <header class="header">
+    <div class="crest-mark">Anno · MMXXVI</div>
+    <h1>MANIFIESTO</h1>
+    <div class="brand">10AMPRO</div>
+    <div class="subtitle">
+      Open Source Capital<span class="sep">·</span>Network Sharing<span class="sep">·</span>Collective Intelligence
+    </div>
+    <div class="year">Carta Fundacional · Código Operativo</div>
+  </header>
+
+  <section class="preamble">
+    <p class="first">10AMPRO no es un grupo de WhatsApp. Eso sería reducirlo al contenedor.</p>
+    <p>10AMPRO es una máquina social para aumentar la superficie de suerte de todos los que están adentro. Una red de gente que entiende que el verdadero alpha no está en esconder información, sino en ponerla a circular entre personas que saben qué hacer con ella.</p>
+    <p class="lead">Porque una idea encerrada se pudre.<br>Una tesis encerrada se vuelve ego.<br>Un contacto encerrado se vuelve status.<br>Y el capital encerrado en una sola cabeza se vuelve límite.</p>
+    <p style="text-align:center;font-style:italic;color:var(--crimson);font-size:21px;">Acá creemos en otra cosa.</p>
+  </section>
+
+  <div class="divider large">✦ ❖ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">I</span><span class="ornament">❦</span></div>
+    <h2>Open Source Capital</h2>
+    <p class="first">El capital no es solo plata.</p>
+    <ul>
+      <li>Capital es una tesis.</li>
+      <li>Capital es un deal.</li>
+      <li>Capital es una lectura temprana.</li>
+      <li>Capital es un contacto.</li>
+      <li>Capital es una alerta.</li>
+      <li>Capital es saber quién está construyendo qué antes de que el resto lo entienda.</li>
+    </ul>
+    <p>En 10AMPRO el capital circula. La tesis se comparte. El trade se explica. El alpha se abre. La oportunidad se pone sobre la mesa.</p>
+    <p>No porque seamos hippies financieros con frases de abundancia pegadas en Notion, sino porque entendemos una cosa básica: cuando el grupo se vuelve más inteligente, todos subimos de nivel.</p>
+    <p class="verse">El edge individual se multiplica<br>cuando entra en una red de gente seria.</p>
+    <p>Uno puede tener una buena idea solo. Pero una buena idea dentro de 10AMPRO se estresa, se mejora, se contradice, se complementa, se conecta y a veces se convierte en algo mucho más grande que la intención original.</p>
+    <p class="standalone">Eso es Open Source Capital.</p>
+    <p>No es regalar ventaja. Es construir una red donde la ventaja se vuelve infraestructura.</p>
+  </article>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">II</span><span class="ornament">❦</span></div>
+    <h2>Network Sharing</h2>
+    <p class="first">Si tengo un contacto que te sirve para tu negocio, tu salud, tu inversión, tu carrera o tu vida, te lo paso.</p>
+    <p class="verse"><strong>Punto.</strong></p>
+    <p>Sin teatro. Sin comisión. Sin "después vemos". Sin jugar al intermediario misterioso como si uno fuera el dueño del puente Golden Gate.</p>
+    <p>El contacto correcto en el momento correcto puede ahorrarle a alguien años de fricción.</p>
+    <ul>
+      <li>Un médico.</li>
+      <li>Un abogado.</li>
+      <li>Un founder.</li>
+      <li>Un inversionista.</li>
+      <li>Un operador.</li>
+      <li>Un técnico.</li>
+      <li>Un restaurante.</li>
+      <li>Un hotel.</li>
+      <li>Un proveedor.</li>
+      <li>Un amigo que sabe resolver.</li>
+    </ul>
+    <p>Acá la red no es decoración social. La red es un sistema de defensa. Se trata de cuidarnos la espalda.</p>
+    <p>Si alguien de 10AMPRO necesita algo y usted puede abrir una puerta, la abre. No se vuelve portero de discoteca con complejo de superioridad. No monetiza cada favor como si tuviera un peaje en el alma.</p>
+    <p>La red se cultiva usándola bien. Y usarla bien significa entender que cada introducción también es una responsabilidad. No se conecta por conectar. No se quema reputación ajena por quedar bien. No se manda cualquier payaso a donde alguien serio.</p>
+    <p class="verse">El Network Sharing funciona cuando hay criterio.<br>Abrir puertas sí. Ensuciar puertas no.</p>
+  </article>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">III</span><span class="ornament">❦</span></div>
+    <h2>Collective Intelligence</h2>
+    <p class="first">En 10AMPRO hay mucho IQ. Pero el IQ aislado es una linterna. El IQ sincronizado es una red eléctrica.</p>
+    <p>El verdadero edge aparece cuando todos comparten lo que están viendo desde su esquina del mapa.</p>
+    <ul>
+      <li>Uno ve macro.</li>
+      <li>Otro ve cripto.</li>
+      <li>Otro ve startups.</li>
+      <li>Otro ve salud.</li>
+      <li>Otro ve energía.</li>
+      <li>Otro ve política.</li>
+      <li>Otro ve consumo.</li>
+      <li>Otro ve infraestructura.</li>
+      <li>Otro está en una mesa, una ciudad, un mercado, una conversación o un aeropuerto donde algo se está moviendo antes de que llegue al consenso.</li>
+    </ul>
+    <p>La inteligencia colectiva no es votar por la opinión promedio. Eso sería democracia de mediocres.</p>
+    <p>La inteligencia colectiva es una red de sensores. Cada persona detecta señales distintas. El valor aparece cuando esas señales se conectan antes de que el mercado las convierta en obvias.</p>
+    <p>Por eso compartir no es ruido cuando hay criterio. Compartir bien es decir:</p>
+    <ul>
+      <li>"Vi esto."</li>
+      <li>"Esto cambió."</li>
+      <li>"Esto no cuadra."</li>
+      <li>"Este founder es serio."</li>
+      <li>"Este producto está explotando."</li>
+      <li>"Este gráfico importa."</li>
+      <li>"Esta regulación cambia el juego."</li>
+      <li>"Este trade tiene convexidad."</li>
+      <li>"Esta narrativa todavía no está priceada."</li>
+    </ul>
+    <p class="verse">El grupo no existe para tener más mensajes.<br>Existe para tener mejor señal.</p>
+    <p style="text-align:center;font-style:italic;">No se premia hablar mucho. Se premia aportar bien.</p>
+  </article>
+
+  <div class="divider large">✦ ❖ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">IV</span><span class="ornament">❦</span></div>
+    <h2>La cultura de abundancia<br>no es conchudez</h2>
+    <p class="first">Acá se comparte sin cobrar. Pero eso no significa que 10AMPRO sea una finca de recreo para recostados profesionales.</p>
+    <p>Hay una diferencia enorme entre abundancia y abuso.</p>
+    <p>Si alguien está mal, quebrado, pasando por un momento difícil o necesita ayuda real, se le ayuda. Se invita. Se cubre. Se apoya. Nadie serio humilla a alguien por estar en una mala temporada.</p>
+    <p>Pero otra cosa muy distinta es vivir recostado.</p>
+    <ul>
+      <li>El que siempre se le "olvidó" pagar.</li>
+      <li>El que nunca pone.</li>
+      <li>El que siempre aparece para recibir y desaparece para aportar.</li>
+      <li>El que pide favores como si fueran derechos humanos.</li>
+      <li>El que usa la generosidad de los demás como modelo de negocio.</li>
+    </ul>
+    <p class="verse">10AMPRO tiene memoria de elefante.<br>No se haga el marica con las cuentas.</p>
+    <p>La abundancia funciona cuando hay reciprocidad. No necesariamente simétrica, no necesariamente inmediata, no necesariamente en plata. Pero sí tiene que existir algún tipo de energía de vuelta.</p>
+    <ul>
+      <li>Aporte en ideas.</li>
+      <li>Aporte en contactos.</li>
+      <li>Aporte en criterio.</li>
+      <li>Aporte en ejecución.</li>
+      <li>Aporte en presencia.</li>
+      <li>Aporte en cuidado.</li>
+      <li>Aporte en buen gusto.</li>
+      <li>Aporte en algo.</li>
+    </ul>
+    <p class="standalone">Pero aporte.</p>
+    <p>Porque una red donde unos construyen y otros solo ordeñan termina convertida en Estado latinoamericano. Y para eso ya tenemos suficientes ejemplos financiados con impuestos.</p>
+  </article>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">V</span><span class="ornament">❦</span></div>
+    <h2>Lo inaceptable</h2>
+    <p class="first">Hay cosas que no van con 10AMPRO.</p>
+    <ul>
+      <li>Cobrar comisiones escondidas.</li>
+      <li>El DNA del CVY.</li>
+      <li>Ser angurrioso.</li>
+      <li>Ser conchudo.</li>
+      <li>Ser desinteresado.</li>
+      <li>Ser high time preference.</li>
+      <li>Llegar solo cuando hay upside.</li>
+      <li>Desaparecer cuando toca poner el hombro.</li>
+      <li>Usar la red sin cuidarla.</li>
+      <li>Pedir sin aportar.</li>
+      <li>Aprovecharse de la confianza.</li>
+      <li>Confundir buena energía con falta de memoria.</li>
+    </ul>
+    <p class="verse">El que viene a extraer, sobra.<br>El que viene a figurar, aburre.<br>El que viene a pedir acceso sin cultivar vínculos, no entendió nada.</p>
+    <p>Para estar en 10AMPRO también hay que cultivar los lazos. Saludar. Aparecer. Compartir. Responder. Cuidar. Tener códigos mínimos. No tratar el grupo como una máquina dispensadora de contactos, ideas y oportunidades.</p>
+    <p style="text-align:center;font-style:italic;">Si no le interesa, no esté. No pasa nada.</p>
+    <p>Pero no pretenda recibir los beneficios de una tribu mientras se comporta como turista.</p>
+    <p class="verse">La guillotina cultural<br>eventualmente hace su trabajo.</p>
+  </article>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">VI</span><span class="ornament">❦</span></div>
+    <h2>Low time preference</h2>
+    <p class="first">10AMPRO es una cultura de largo plazo. Eso significa que no todo se mide por el retorno inmediato.</p>
+    <p>A veces una conversación de hoy se convierte en un deal en tres años.</p>
+    <ul>
+      <li>Una comida se convierte en una empresa.</li>
+      <li>Una tesis compartida se convierte en una inversión.</li>
+      <li>Una presentación se convierte en una amistad.</li>
+      <li>Una amistad se convierte en una red de protección.</li>
+    </ul>
+    <p>La gente high time preference no entiende esto.</p>
+    <ul>
+      <li>Quiere el beneficio ya.</li>
+      <li>Quiere el contacto ya.</li>
+      <li>Quiere el alpha ya.</li>
+      <li>Quiere la respuesta ya.</li>
+      <li>Quiere el retorno ya.</li>
+    </ul>
+    <p style="text-align:center;font-style:italic;">Pero no quiere sembrar.</p>
+    <p>Esa mentalidad es veneno para una red.</p>
+    <p>10AMPRO funciona porque hay gente pensando en décadas, no en el próximo almuerzo gratis.</p>
+    <p>El que solo sabe extraer valor inmediato nunca construye capital social. Solo acumula pequeñas deudas invisibles hasta que un día nadie le contesta.</p>
+  </article>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">VII</span><span class="ornament">❦</span></div>
+    <h2>Buen gusto como señal</h2>
+    <p class="first">Y sí: también está el tema del gusto.</p>
+    <p class="verse">No pida Coca-Cola ni papitas en un almuerzo serio.<br>Mucho menos sorbete de lulo.</p>
+    <p>No es esnobismo. Es respeto por la experiencia.</p>
+    <p>Hay momentos para todo. Pero si alguien se tomó el trabajo de escoger un buen sitio, pedir buen vino, armar una buena mesa, cuidar la conversación y diseñar una experiencia, no llegue a meterle ruido de estación de gasolina.</p>
+    <p class="standalone">El gusto también es una forma de inteligencia.</p>
+    <p>Saber comer, saber tomar, saber estar, saber escuchar, saber pedir, saber cuándo hablar y cuándo no, todo eso comunica.</p>
+    <p style="text-align:center;font-style:italic;">No se trata de plata. Se trata de mundo.</p>
+    <p>Hay gente con mucha plata y cero mundo. Hay gente con poca plata y una elegancia natural impresionante.</p>
+    <p>El problema no es no saber. El problema es no querer aprender.</p>
+    <p class="verse">10AMPRO no exige pretensión.<br>Exige curiosidad.</p>
+    <p>Porque el buen gusto, como el buen pensamiento, se cultiva.</p>
+  </article>
+
+  <div class="divider large">✦ ❖ ✦</div>
+
+  <article class="article">
+    <div class="article-mark"><span class="ornament">❦</span><span class="roman">VIII</span><span class="ornament">❦</span></div>
+    <h2>La regla de fondo</h2>
+    <p class="first">La regla de fondo es simple:</p>
+    <p class="verse"><strong>Si estás en 10AMPRO,<br>ayuda a que la red sea<br>más inteligente, más útil,<br>más confiable y más abundante.</strong></p>
+    <ul>
+      <li>Comparta señal.</li>
+      <li>Abra puertas.</li>
+      <li>Cuide la reputación del grupo.</li>
+      <li>No abuse.</li>
+      <li>No cobre peajes ridículos.</li>
+      <li>No sea conchudo.</li>
+      <li>No sea turista.</li>
+      <li>No sea ruido.</li>
+    </ul>
+    <p class="standalone">Este no es un club para posar.<br>Es una red para construir.</p>
+    <p>Y las redes serias tienen una matemática brutal: cada nodo bueno aumenta el valor de todos; cada nodo malo contamina el sistema completo.</p>
+    <p style="text-align:center;font-style:italic;">Por eso la cultura importa. La cultura es el firewall.</p>
+  </article>
+
+  <section class="closing">
+    <p class="closing-paragraph">10AMPRO existe para encontrar señal antes que el consenso, construir relaciones antes que necesitarlas, compartir capital antes de volverlo ego y multiplicar inteligencia antes de que el mercado la convierta en precio.</p>
+
+    <div class="closing-pillars">
+      <div>OPEN SOURCE CAPITAL</div>
+      <div>NETWORK SHARING</div>
+      <div>COLLECTIVE INTELLIGENCE</div>
+    </div>
+
+    <p class="closing-statement">
+      No como slogan.<br>
+      <strong>Como código operativo.</strong>
+    </p>
+
+    <div class="seal" aria-hidden="true">
+      <div class="seal-10">10</div>
+      <div class="seal-am">AM·PRO</div>
+      <div class="seal-mmxxvi">MMXXVI</div>
+    </div>
+
+    <div class="signature">
+      <a href="https://10am.pro" target="_blank" rel="noopener">10am.pro</a>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>
